@@ -26,11 +26,6 @@ def voronoi_volumes(points):
             vol[i] = ConvexHull(v.vertices[indices]).volume
     return vol
 
-## Plot formatting, Latex font and thicker axes
-plt.rc('text', usetex=True)
-plt.rc('font', family='serif')
-plt.rc('axes', linewidth=3)
-
 delt = 0.2 # Cutoff distance from contact (see Lin et al.)
 umpx = 0.1004 # Micrometre pixel^-1
 pDiam = 2.85 # Particle diameter in micrometres
