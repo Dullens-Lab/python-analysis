@@ -45,7 +45,7 @@ meanDist /= (tMax/frNum)
 
 r2 = meanDist**2
 
-mdl = gen_model(r) # Model hexagon
+mdl = gen_model(meanDist) # Model hexagon
 
 
 pStrain = np.column_stack((sData, np.zeros((sData.shape[0],3)) # x, y, frame, E_xx, E_xy/E_yx, E_yy
