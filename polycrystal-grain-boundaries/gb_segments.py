@@ -158,7 +158,7 @@ def gbPts(frData):
 def gbSegFind(pData, fileLoc):
     tMax = int(np.amax(pData[:,2]))
     gbSeg = np.empty((0,10))
-    for i in range(tMax):
+    for i in range(tMax+1):
         if i % 10 == 0:
             print("Finding gb frame " + str(i))
         frD = pData[np.where(pData[:,2] == i)]
