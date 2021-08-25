@@ -45,7 +45,7 @@ meanDist /= (tMax/frNum)
 
 r2 = meanDist**2
 
-mdl = gen_model(r) # Model hexagon
+mdl = gen_model(meanDist) # Model hexagon
 
 
 pStrain = np.column_stack((sData, np.zeros((sData.shape[0],3)) # x, y, frame, E_xx, E_xy/E_yx, E_yy
@@ -88,4 +88,4 @@ for t in range(0,tMax,1):
         pStrain[frameWhr[0][pNum[p]],5] = pOr[0,1]
         pStrain[frameWhr[0][pNum[p]],6] = pOr[1,1]
 
-np.savetxt(fileLoc+"small_strain_components.dat", pStress, fmt = "%.4f\t%.4f\t%.4f\t%.4f\t%.4f\t%.4f\r")
+np.savetxt(fileLoc+"small_strain_components.dat", pStrain, fmt = "%.4f\t%.4f\t%.4f\t%.4f\t%.4f\t%.4f\r")
